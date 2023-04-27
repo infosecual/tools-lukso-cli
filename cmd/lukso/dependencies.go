@@ -30,6 +30,10 @@ const (
 	prysmTestnetConfigDependencyName = "prysm testnet config"
 	prysmDevnetConfigDependencyName  = "prysm devnet config"
 
+	lighthouseMainnetConfigDependencyName = "lighthouse mainnet config"
+	lighthouseTestnetConfigDependencyName = "lighthouse testnet config"
+	lighthouseDevnetConfigDependencyName  = "lighthouse devnet config"
+
 	validatorMainnetConfigDependencyName = "validator mainnet config"
 	validatorTestnetConfigDependencyName = "validator testnet config"
 	validatorDevnetConfigDependencyName  = "validator devnet config"
@@ -106,12 +110,17 @@ var (
 			filePath: mainnetConfig + "/" + erigonTomlPath,
 		},
 		prysmMainnetConfigDependencyName: {
-			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/feature/blockchain-clients-configs/mainnet/prysm/prysm.yaml",
+			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/main/mainnet/prysm/prysm.yaml",
 			name:     prysmMainnetConfigDependencyName,
 			filePath: mainnetConfig + "/" + prysmYamlPath,
 		},
+		lighthouseMainnetConfigDependencyName: {
+			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/main/mainnet/lighthouse/lighthouse.yaml",
+			name:     lighthouseMainnetConfigDependencyName,
+			filePath: mainnetConfig + "/" + lighthouseYamlPath,
+		},
 		validatorMainnetConfigDependencyName: {
-			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/feature/blockchain-clients-configs/mainnet/prysm/validator.yaml",
+			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/main/mainnet/prysm/validator.yaml",
 			name:     validatorMainnetConfigDependencyName,
 			filePath: mainnetConfig + "/" + validatorYamlPath,
 		},
@@ -142,12 +151,17 @@ var (
 			filePath: testnetConfig + "/" + erigonTomlPath,
 		},
 		prysmTestnetConfigDependencyName: {
-			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/feature/blockchain-clients-configs/testnet/prysm/prysm.yaml",
+			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/main/testnet/prysm/prysm.yaml",
 			name:     prysmTestnetConfigDependencyName,
 			filePath: testnetConfig + "/" + prysmYamlPath,
 		},
+		lighthouseTestnetConfigDependencyName: {
+			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/main/testnet/lighthouse/lighthouse.yaml",
+			name:     lighthouseTestnetConfigDependencyName,
+			filePath: testnetConfig + "/" + lighthouseYamlPath,
+		},
 		validatorTestnetConfigDependencyName: {
-			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/feature/blockchain-clients-configs/testnet/prysm/validator.yaml",
+			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/main/testnet/prysm/validator.yaml",
 			name:     validatorTestnetConfigDependencyName,
 			filePath: testnetConfig + "/" + validatorYamlPath,
 		},
@@ -181,6 +195,11 @@ var (
 			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/main/devnets/3030/prysm/prysm.yaml",
 			name:     prysmDevnetConfigDependencyName,
 			filePath: devnetConfig + "/" + prysmYamlPath,
+		},
+		lighthouseDevnetConfigDependencyName: {
+			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/feature/lighthouse-configs/devnets/3030/lighthouse/lighthouse.yaml",
+			name:     lighthouseDevnetConfigDependencyName,
+			filePath: devnetConfig + "/" + lighthouseYamlPath,
 		},
 		validatorDevnetConfigDependencyName: {
 			baseUrl:  "https://raw.githubusercontent.com/lukso-network/network-configs/main/devnets/3030/prysm/validator.yaml",
